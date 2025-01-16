@@ -14,7 +14,7 @@ jobs:
         run: echo "welcome to the Gh ACTIONS"
       - name: Install HTMLHint
         run: npm install --save-dev htmlhint
-      - name: Install StleLint
+      - name: Install StyleLint
         run: npm install --save-dev stylelint
       - name: Lint HTML file
         run: npx htmlhint **/*.html
