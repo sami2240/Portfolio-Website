@@ -1,0 +1,25 @@
+name: ci-wf
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - develop
+jobs:
+  linting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Welcome step
+        run: echo "welcome to the Gh ACTIONS"
+      - name: Intalling Node
+        uses: npm init -y
+        run: npm --version
+      - name: Install HTMLHint
+        run: npm install --save-dev htmlhint
+      - name: Install StleLint
+        run: npm install --save-dev stylelint
+      - name: Lint HTML file
+        run: npx htmlhint **/*.html
+      - name: Lint Style file
+        run: npx stylelint **/*.html
