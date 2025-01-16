@@ -12,9 +12,6 @@ jobs:
     steps:
       - name: Welcome step
         run: echo "welcome to the Gh ACTIONS"
-      - name: Intalling Node
-        uses: npm init -y
-        run: npm --version
       - name: Install HTMLHint
         run: npm install --save-dev htmlhint
       - name: Install StleLint
