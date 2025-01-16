@@ -19,4 +19,4 @@ jobs:
       - name: Lint HTML file
         run: npx htmlhint "**/*.html"
       - name: Lint Style file
-        run: npx stylelint "**/*.css"
+        run: npx stylelint "**/*.css" --debug
