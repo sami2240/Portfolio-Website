@@ -7,8 +7,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "stylelint": "^16.13.2"
-  },
+    "devDependencies": {
+        "stylelint": "^16.13.2",
+        "htmlhint": "^1.1.4"
+    },
   "description": ""
 }
