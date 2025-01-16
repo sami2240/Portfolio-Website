@@ -14,24 +14,11 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16 # Use the version compatible with your project
-
-      - name: Cache Node.js Modules
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Install Dependencies
-        run: npm ci
-
-      - name: Lint HTML files
+      - name: Install HTMLHint
+        run: npm install --save-dev htmlhint
+      - name: Install StyleLint
+        run: npm install --save-dev stylelint
+      - name: Lint HTML file
         run: npx htmlhint "**/*.html"
-
-      - name: Lint CSS files
+      - name: Lint Style file
         run: npx stylelint "**/*.css"
